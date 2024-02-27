@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{6904717f-8cb5-4352-9899-b56a41f94393}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Time">
+      <UniqueIdentifier>{4d041466-c962-45f9-b95b-9f8b0b5cb612}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Input">
+      <UniqueIdentifier>{c4ed46e0-f351-40f8-b2ba-7f3a0bf024db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Utils">
+      <UniqueIdentifier>{42fd952e-e7e9-4e95-b496-54d9a658b5a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Update">
+      <UniqueIdentifier>{c6c3c992-9900-454f-9c03-05bea2f843d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Update\Update">
+      <UniqueIdentifier>{9a1b41e2-0620-46b7-a2ad-3145efac9bf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Display">
+      <UniqueIdentifier>{57fb75ac-1626-48fe-bcd9-90fab711c3ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Display\Mesh">
+      <UniqueIdentifier>{5cc0c36a-ef0f-4163-9bb0-fdc1ad42b218}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Display\Display">
+      <UniqueIdentifier>{e891619a-8417-4cb1-a61f-2b86f72ad90e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Display\Shader">
+      <UniqueIdentifier>{8e187d52-8a79-4be1-a0be-e02933c11297}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Display\Texture">
+      <UniqueIdentifier>{c69bf380-3974-4aed-9c14-29b87c0b33b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Component">
+      <UniqueIdentifier>{4996ada2-4884-4822-af40-98f3c238657f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Component\MeshRenderer">
+      <UniqueIdentifier>{05952f50-5739-44cf-b2e6-4e9e7141bac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Component\Camera">
+      <UniqueIdentifier>{0e040cb1-c42c-4235-9f48-f4d59d0d82e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Component\Collider">
+      <UniqueIdentifier>{eda53d12-057f-487a-a67f-6f48814b5bcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Component\Movement">
+      <UniqueIdentifier>{0bd0f10e-073b-42ca-8ee5-29c36fd76bab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Component\Script">
+      <UniqueIdentifier>{3d655150-debc-4016-bb8a-0ac6bfa81fcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Component\Components">
+      <UniqueIdentifier>{973637b4-f4c2-4128-a171-da18471ec1c0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Moteur\Source\Time.h">
+      <Filter>Source\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Moteur\Source\Update.h">
+      <Filter>Source\Update\Update</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Moteur\Source\Mesh.h">
+      <Filter>Source\Display\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Moteur\Source\Display.h">
+      <Filter>Source\Display\Display</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Moteur\Source\Shader.h">
+      <Filter>Source\Display\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Moteur\Source\Texture.h">
+      <Filter>Source\Display\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Moteur\Source\MeshRenderer.h">
+      <Filter>Source\Component\MeshRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Moteur\Source\Camera.h">
+      <Filter>Source\Component\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Moteur\Source\Collider.h">
+      <Filter>Source\Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Moteur\Source\Movement.h">
+      <Filter>Source\Component\Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Moteur\Source\Script.h">
+      <Filter>Source\Component\Script</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Moteur\Source\Components.h">
+      <Filter>Source\Component\Components</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MoteurLib.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Moteur\Source\Time.cpp">
+      <Filter>Source\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Moteur\Source\Update.cpp">
+      <Filter>Source\Update\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Moteur\Source\Mesh.cpp">
+      <Filter>Source\Display\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Moteur\Source\Display.cpp">
+      <Filter>Source\Display\Display</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Moteur\Source\Shader.cpp">
+      <Filter>Source\Display\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Moteur\Source\Texture.cpp">
+      <Filter>Source\Display\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Moteur\Source\MeshRenderer.cpp">
+      <Filter>Source\Component\MeshRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Moteur\Source\Camera.cpp">
+      <Filter>Source\Component\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Moteur\Source\Collider.cpp">
+      <Filter>Source\Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Moteur\Source\Movement.cpp">
+      <Filter>Source\Component\Movement</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Moteur\Source\Script.cpp">
+      <Filter>Source\Component\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Moteur\Source\Components.cpp">
+      <Filter>Source\Component\Components</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
