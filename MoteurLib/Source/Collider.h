@@ -1,7 +1,15 @@
 #pragma once
-#include "Components.h"
+#include "Component.h"
 
-class Collider : public Components
+class Collider : public Component
 {
-};
+public:
+	Collider();
+	~Collider();
 
+	void OnCollision();
+	void CheckCollision();
+
+private:
+
+};
