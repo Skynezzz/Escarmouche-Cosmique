@@ -67,6 +67,9 @@
     <Filter Include="Source\Component\Components">
       <UniqueIdentifier>{973637b4-f4c2-4128-a171-da18471ec1c0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Engine">
+      <UniqueIdentifier>{a7b60708-8e97-4bc2-b3d6-3ec807e0ac27}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -75,41 +78,44 @@
     <ClInclude Include="pch.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\Moteur\Source\Time.h">
-      <Filter>Source\Time</Filter>
+    <ClInclude Include="Source\Engine.h">
+      <Filter>Source\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Moteur\Source\Update.h">
-      <Filter>Source\Update\Update</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Moteur\Source\Mesh.h">
-      <Filter>Source\Display\Mesh</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Moteur\Source\Display.h">
-      <Filter>Source\Display\Display</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Moteur\Source\Shader.h">
-      <Filter>Source\Display\Shader</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Moteur\Source\Texture.h">
-      <Filter>Source\Display\Texture</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Moteur\Source\MeshRenderer.h">
-      <Filter>Source\Component\MeshRenderer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Moteur\Source\Camera.h">
+    <ClInclude Include="Source\Camera.h">
       <Filter>Source\Component\Camera</Filter>
     </ClInclude>
-    <ClInclude Include="..\Moteur\Source\Collider.h">
+    <ClInclude Include="Source\Collider.h">
       <Filter>Source\Component\Collider</Filter>
     </ClInclude>
-    <ClInclude Include="..\Moteur\Source\Movement.h">
+    <ClInclude Include="Source\Components.h">
+      <Filter>Source\Component\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\MeshRenderer.h">
+      <Filter>Source\Component\MeshRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Movement.h">
       <Filter>Source\Component\Movement</Filter>
     </ClInclude>
-    <ClInclude Include="..\Moteur\Source\Script.h">
+    <ClInclude Include="Source\Script.h">
       <Filter>Source\Component\Script</Filter>
     </ClInclude>
-    <ClInclude Include="..\Moteur\Source\Components.h">
-      <Filter>Source\Component\Components</Filter>
+    <ClInclude Include="Source\Display.h">
+      <Filter>Source\Display\Display</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Mesh.h">
+      <Filter>Source\Display\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Shader.h">
+      <Filter>Source\Display\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Texture.h">
+      <Filter>Source\Display\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Update.h">
+      <Filter>Source\Update\Update</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Time.h">
+      <Filter>Source\Utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -119,41 +125,44 @@
     <ClCompile Include="pch.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\Moteur\Source\Time.cpp">
-      <Filter>Source\Time</Filter>
+    <ClCompile Include="Source\Engine.cpp">
+      <Filter>Source\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Moteur\Source\Update.cpp">
-      <Filter>Source\Update\Update</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Moteur\Source\Mesh.cpp">
-      <Filter>Source\Display\Mesh</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Moteur\Source\Display.cpp">
-      <Filter>Source\Display\Display</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Moteur\Source\Shader.cpp">
-      <Filter>Source\Display\Shader</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Moteur\Source\Texture.cpp">
-      <Filter>Source\Display\Texture</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Moteur\Source\MeshRenderer.cpp">
-      <Filter>Source\Component\MeshRenderer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Moteur\Source\Camera.cpp">
+    <ClCompile Include="Source\Camera.cpp">
       <Filter>Source\Component\Camera</Filter>
     </ClCompile>
-    <ClCompile Include="..\Moteur\Source\Collider.cpp">
+    <ClCompile Include="Source\Collider.cpp">
       <Filter>Source\Component\Collider</Filter>
     </ClCompile>
-    <ClCompile Include="..\Moteur\Source\Movement.cpp">
+    <ClCompile Include="Source\Components.cpp">
+      <Filter>Source\Component\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MeshRenderer.cpp">
+      <Filter>Source\Component\MeshRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Movement.cpp">
       <Filter>Source\Component\Movement</Filter>
     </ClCompile>
-    <ClCompile Include="..\Moteur\Source\Script.cpp">
+    <ClCompile Include="Source\Script.cpp">
       <Filter>Source\Component\Script</Filter>
     </ClCompile>
-    <ClCompile Include="..\Moteur\Source\Components.cpp">
-      <Filter>Source\Component\Components</Filter>
+    <ClCompile Include="Source\Display.cpp">
+      <Filter>Source\Display\Display</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Mesh.cpp">
+      <Filter>Source\Display\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Shader.cpp">
+      <Filter>Source\Display\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Texture.cpp">
+      <Filter>Source\Display\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Update.cpp">
+      <Filter>Source\Update\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Time.cpp">
+      <Filter>Source\Utils</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

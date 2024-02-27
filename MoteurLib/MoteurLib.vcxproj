@@ -139,34 +139,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\Moteur\Source\Camera.h" />
-    <ClInclude Include="..\Moteur\Source\Collider.h" />
-    <ClInclude Include="..\Moteur\Source\Components.h" />
-    <ClInclude Include="..\Moteur\Source\Display.h" />
-    <ClInclude Include="..\Moteur\Source\Mesh.h" />
-    <ClInclude Include="..\Moteur\Source\MeshRenderer.h" />
-    <ClInclude Include="..\Moteur\Source\Movement.h" />
-    <ClInclude Include="..\Moteur\Source\Script.h" />
-    <ClInclude Include="..\Moteur\Source\Shader.h" />
-    <ClInclude Include="..\Moteur\Source\Texture.h" />
-    <ClInclude Include="..\Moteur\Source\Time.h" />
-    <ClInclude Include="..\Moteur\Source\Update.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Source\Camera.h" />
+    <ClInclude Include="Source\Collider.h" />
+    <ClInclude Include="Source\Components.h" />
+    <ClInclude Include="Source\Display.h" />
+    <ClInclude Include="Source\Engine.h" />
+    <ClInclude Include="Source\Mesh.h" />
+    <ClInclude Include="Source\MeshRenderer.h" />
+    <ClInclude Include="Source\Movement.h" />
+    <ClInclude Include="Source\Script.h" />
+    <ClInclude Include="Source\Shader.h" />
+    <ClInclude Include="Source\Texture.h" />
+    <ClInclude Include="Source\Time.h" />
+    <ClInclude Include="Source\Update.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Moteur\Source\Camera.cpp" />
-    <ClCompile Include="..\Moteur\Source\Collider.cpp" />
-    <ClCompile Include="..\Moteur\Source\Components.cpp" />
-    <ClCompile Include="..\Moteur\Source\Display.cpp" />
-    <ClCompile Include="..\Moteur\Source\Mesh.cpp" />
-    <ClCompile Include="..\Moteur\Source\MeshRenderer.cpp" />
-    <ClCompile Include="..\Moteur\Source\Movement.cpp" />
-    <ClCompile Include="..\Moteur\Source\Script.cpp" />
-    <ClCompile Include="..\Moteur\Source\Shader.cpp" />
-    <ClCompile Include="..\Moteur\Source\Texture.cpp" />
-    <ClCompile Include="..\Moteur\Source\Time.cpp" />
-    <ClCompile Include="..\Moteur\Source\Update.cpp" />
     <ClCompile Include="MoteurLib.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -174,6 +163,19 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Source\Camera.cpp" />
+    <ClCompile Include="Source\Collider.cpp" />
+    <ClCompile Include="Source\Components.cpp" />
+    <ClCompile Include="Source\Display.cpp" />
+    <ClCompile Include="Source\Engine.cpp" />
+    <ClCompile Include="Source\Mesh.cpp" />
+    <ClCompile Include="Source\MeshRenderer.cpp" />
+    <ClCompile Include="Source\Movement.cpp" />
+    <ClCompile Include="Source\Script.cpp" />
+    <ClCompile Include="Source\Shader.cpp" />
+    <ClCompile Include="Source\Texture.cpp" />
+    <ClCompile Include="Source\Time.cpp" />
+    <ClCompile Include="Source\Update.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
