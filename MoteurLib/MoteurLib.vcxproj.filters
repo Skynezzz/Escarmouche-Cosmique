@@ -126,6 +126,9 @@
     <ClInclude Include="pch.h">
       <Filter>Source\pch</Filter>
     </ClInclude>
+    <ClInclude Include="maths.h">
+      <Filter>Source\Utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MoteurLib.cpp">
@@ -175,6 +178,9 @@
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Source\pch</Filter>
+    </ClCompile>
+    <ClCompile Include="maths.cpp">
+      <Filter>Source\Utils</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
