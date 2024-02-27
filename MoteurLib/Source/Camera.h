@@ -1,6 +1,12 @@
 #pragma once
-#include "Components.h"
+#include "Component.h"
 
-class Camera : public Components
+class Camera : public Component
 {
+public:
+	Camera();
+	~Camera();
+
+private:
+
 };

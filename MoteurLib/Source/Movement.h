@@ -1,7 +1,16 @@
 #pragma once
-#include "Components.h"
+#include "Component.h"
 
-class Movement : public Components
+class Movement : public Component
 {
-};
+public:
+	Movement();
+	~Movement() override;
 
+
+	void SetDirection();
+	void Move();
+
+private:
+
+};

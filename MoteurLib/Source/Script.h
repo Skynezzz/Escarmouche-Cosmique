@@ -1,7 +1,12 @@
 #pragma once
-#include "Components.h"
+#include "Component.h"
 
-class Script : public Components
+class Script : public Component
 {
-};
+public:
+	Script();
+	~Script();
 
+private:
+
+};

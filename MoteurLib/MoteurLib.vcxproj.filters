@@ -46,29 +46,29 @@
     <Filter Include="Source\Display\Texture">
       <UniqueIdentifier>{c69bf380-3974-4aed-9c14-29b87c0b33b8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\Component">
-      <UniqueIdentifier>{4996ada2-4884-4822-af40-98f3c238657f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Component\MeshRenderer">
-      <UniqueIdentifier>{05952f50-5739-44cf-b2e6-4e9e7141bac3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Component\Camera">
-      <UniqueIdentifier>{0e040cb1-c42c-4235-9f48-f4d59d0d82e4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Component\Collider">
-      <UniqueIdentifier>{eda53d12-057f-487a-a67f-6f48814b5bcd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Component\Movement">
-      <UniqueIdentifier>{0bd0f10e-073b-42ca-8ee5-29c36fd76bab}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Component\Script">
-      <UniqueIdentifier>{3d655150-debc-4016-bb8a-0ac6bfa81fcd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Component\Components">
-      <UniqueIdentifier>{973637b4-f4c2-4128-a171-da18471ec1c0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source\Engine">
       <UniqueIdentifier>{a7b60708-8e97-4bc2-b3d6-3ec807e0ac27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Components">
+      <UniqueIdentifier>{4996ada2-4884-4822-af40-98f3c238657f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Components\MeshRenderer">
+      <UniqueIdentifier>{05952f50-5739-44cf-b2e6-4e9e7141bac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Components\Camera">
+      <UniqueIdentifier>{0e040cb1-c42c-4235-9f48-f4d59d0d82e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Components\Collider">
+      <UniqueIdentifier>{eda53d12-057f-487a-a67f-6f48814b5bcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Components\Movement">
+      <UniqueIdentifier>{0bd0f10e-073b-42ca-8ee5-29c36fd76bab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Components\Script">
+      <UniqueIdentifier>{3d655150-debc-4016-bb8a-0ac6bfa81fcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Components\Component">
+      <UniqueIdentifier>{973637b4-f4c2-4128-a171-da18471ec1c0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -82,22 +82,22 @@
       <Filter>Source\Engine</Filter>
     </ClInclude>
     <ClInclude Include="Source\Camera.h">
-      <Filter>Source\Component\Camera</Filter>
+      <Filter>Source\Components\Camera</Filter>
     </ClInclude>
     <ClInclude Include="Source\Collider.h">
-      <Filter>Source\Component\Collider</Filter>
+      <Filter>Source\Components\Collider</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Components.h">
-      <Filter>Source\Component\Components</Filter>
+    <ClInclude Include="Source\Component.h">
+      <Filter>Source\Components\Component</Filter>
     </ClInclude>
     <ClInclude Include="Source\MeshRenderer.h">
-      <Filter>Source\Component\MeshRenderer</Filter>
+      <Filter>Source\Components\MeshRenderer</Filter>
     </ClInclude>
     <ClInclude Include="Source\Movement.h">
-      <Filter>Source\Component\Movement</Filter>
+      <Filter>Source\Components\Movement</Filter>
     </ClInclude>
     <ClInclude Include="Source\Script.h">
-      <Filter>Source\Component\Script</Filter>
+      <Filter>Source\Components\Script</Filter>
     </ClInclude>
     <ClInclude Include="Source\Display.h">
       <Filter>Source\Display\Display</Filter>
@@ -115,7 +115,7 @@
       <Filter>Source\Update\Update</Filter>
     </ClInclude>
     <ClInclude Include="Source\Time.h">
-      <Filter>Source\Utils</Filter>
+      <Filter>Source\Time</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -129,22 +129,22 @@
       <Filter>Source\Engine</Filter>
     </ClCompile>
     <ClCompile Include="Source\Camera.cpp">
-      <Filter>Source\Component\Camera</Filter>
+      <Filter>Source\Components\Camera</Filter>
     </ClCompile>
     <ClCompile Include="Source\Collider.cpp">
-      <Filter>Source\Component\Collider</Filter>
+      <Filter>Source\Components\Collider</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Components.cpp">
-      <Filter>Source\Component\Components</Filter>
+    <ClCompile Include="Source\Component.cpp">
+      <Filter>Source\Components\Component</Filter>
     </ClCompile>
     <ClCompile Include="Source\MeshRenderer.cpp">
-      <Filter>Source\Component\MeshRenderer</Filter>
+      <Filter>Source\Components\MeshRenderer</Filter>
     </ClCompile>
     <ClCompile Include="Source\Movement.cpp">
-      <Filter>Source\Component\Movement</Filter>
+      <Filter>Source\Components\Movement</Filter>
     </ClCompile>
     <ClCompile Include="Source\Script.cpp">
-      <Filter>Source\Component\Script</Filter>
+      <Filter>Source\Components\Script</Filter>
     </ClCompile>
     <ClCompile Include="Source\Display.cpp">
       <Filter>Source\Display\Display</Filter>
@@ -162,7 +162,7 @@
       <Filter>Source\Update\Update</Filter>
     </ClCompile>
     <ClCompile Include="Source\Time.cpp">
-      <Filter>Source\Utils</Filter>
+      <Filter>Source\Time</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
