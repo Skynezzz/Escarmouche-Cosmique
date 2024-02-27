@@ -9,5 +9,12 @@
 
 // ajouter les en-têtes à précompiler ici
 #include "framework.h"
+#include <windows.h> // for XMVerifyCPUSupport
+#include <DirectXMath.h>
+#include <DirectXPackedVector.h>
+#include <iostream>
+using namespace std;
+using namespace DirectX;
+using namespace DirectX::PackedVector;
 
 #endif //PCH_H
