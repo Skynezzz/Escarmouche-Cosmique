@@ -70,6 +70,9 @@
     <Filter Include="Source\Engine">
       <UniqueIdentifier>{a7b60708-8e97-4bc2-b3d6-3ec807e0ac27}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\GameObject">
+      <UniqueIdentifier>{d5b1f3b3-4e0c-4ca8-a2e1-5af046ddce12}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -115,7 +118,10 @@
       <Filter>Source\Update\Update</Filter>
     </ClInclude>
     <ClInclude Include="Source\Time.h">
-      <Filter>Source\Utils</Filter>
+      <Filter>Source\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Source\GameObject</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -162,7 +168,10 @@
       <Filter>Source\Update\Update</Filter>
     </ClCompile>
     <ClCompile Include="Source\Time.cpp">
-      <Filter>Source\Utils</Filter>
+      <Filter>Source\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source\GameObject</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
