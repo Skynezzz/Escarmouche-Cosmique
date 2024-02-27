@@ -1,7 +1,12 @@
 #pragma once
-#include "Components.h"
+#include "Component.h"
 
-class MeshRenderer : public Components
+class MeshRenderer : public Component
 {
-};
+public:
+	MeshRenderer();
+	~MeshRenderer();
 
+private:
+
+};
