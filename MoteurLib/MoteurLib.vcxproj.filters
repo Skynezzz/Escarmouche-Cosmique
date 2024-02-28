@@ -16,9 +16,6 @@
     <Filter Include="Source">
       <UniqueIdentifier>{6904717f-8cb5-4352-9899-b56a41f94393}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\Time">
-      <UniqueIdentifier>{4d041466-c962-45f9-b95b-9f8b0b5cb612}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source\Input">
       <UniqueIdentifier>{c4ed46e0-f351-40f8-b2ba-7f3a0bf024db}</UniqueIdentifier>
     </Filter>
@@ -82,6 +79,9 @@
     <Filter Include="Source\Window">
       <UniqueIdentifier>{d10376d9-0266-442e-94e4-6db823e7b915}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Timer">
+      <UniqueIdentifier>{4d041466-c962-45f9-b95b-9f8b0b5cb612}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Engine.h">
@@ -120,20 +120,20 @@
     <ClInclude Include="Source\Update.h">
       <Filter>Source\Update\Update</Filter>
     </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>Source\GameObject</Filter>
-    </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Source\pch</Filter>
-    </ClInclude>
-    <ClInclude Include="maths.h">
-      <Filter>Source\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Timer.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Window.h">
       <Filter>Source\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Timer.h">
+      <Filter>Source\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\maths.h">
+      <Filter>Source\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\pch.h">
+      <Filter>Source\pch</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\GameObject.h">
+      <Filter>Source\GameObject</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -173,20 +173,20 @@
     <ClCompile Include="Source\Update.cpp">
       <Filter>Source\Update\Update</Filter>
     </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Source\GameObject</Filter>
-    </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>Source\pch</Filter>
-    </ClCompile>
-    <ClCompile Include="maths.cpp">
-      <Filter>Source\Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Timer.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Window.cpp">
       <Filter>Source\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Timer.cpp">
+      <Filter>Source\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\maths.cpp">
+      <Filter>Source\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\pch.cpp">
+      <Filter>Source\pch</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameObject.cpp">
+      <Filter>Source\GameObject</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

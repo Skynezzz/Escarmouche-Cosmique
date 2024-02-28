@@ -139,17 +139,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="GameObject.h" />
-    <ClInclude Include="maths.h" />
-    <ClInclude Include="pch.h" />
     <ClInclude Include="Source\Camera.h" />
     <ClInclude Include="Source\Collider.h" />
     <ClInclude Include="Source\Component.h" />
     <ClInclude Include="Source\Display.h" />
     <ClInclude Include="Source\Engine.h" />
+    <ClInclude Include="Source\GameObject.h" />
+    <ClInclude Include="Source\maths.h" />
     <ClInclude Include="Source\Mesh.h" />
     <ClInclude Include="Source\MeshRenderer.h" />
     <ClInclude Include="Source\Movement.h" />
+    <ClInclude Include="Source\pch.h" />
     <ClInclude Include="Source\Script.h" />
     <ClInclude Include="Source\Shader.h" />
     <ClInclude Include="Source\Texture.h" />
@@ -158,22 +158,17 @@
     <ClInclude Include="Source\Window.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="maths.cpp" />
-    <ClCompile Include="pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="Source\Camera.cpp" />
     <ClCompile Include="Source\Collider.cpp" />
     <ClCompile Include="Source\Component.cpp" />
     <ClCompile Include="Source\Display.cpp" />
     <ClCompile Include="Source\Engine.cpp" />
+    <ClCompile Include="Source\GameObject.cpp" />
+    <ClCompile Include="Source\maths.cpp" />
     <ClCompile Include="Source\Mesh.cpp" />
     <ClCompile Include="Source\MeshRenderer.cpp" />
     <ClCompile Include="Source\Movement.cpp" />
+    <ClCompile Include="Source\pch.cpp" />
     <ClCompile Include="Source\Script.cpp" />
     <ClCompile Include="Source\Shader.cpp" />
     <ClCompile Include="Source\Texture.cpp" />
