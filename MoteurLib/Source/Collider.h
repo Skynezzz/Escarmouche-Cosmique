@@ -1,5 +1,8 @@
 #pragma once
 #include "Component.h"
+#include "../Source/pch.h"
+
+#include <vector>
 
 // Structure représentant une boîte englobante
 struct BoundingBox
@@ -12,6 +15,13 @@ struct BoundingBox
 struct BoundingSphere {
 	XMFLOAT3 center; // Centre de la sphère
 	float radius;    // Rayon de la sphère
+};
+
+// Structure représentant un maillage de triangle
+struct Triangle {
+	XMFLOAT3 v0;
+	XMFLOAT3 v1;
+	XMFLOAT3 v2;
 };
 
 class Collider : public Component
