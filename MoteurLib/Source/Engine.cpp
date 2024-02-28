@@ -36,7 +36,7 @@ void Engine::Run()
             mTime.Tick();
 
             // Update
-            mPlayer.Update(mTime);
+            // mPlayer.Update(mTime);
 
             // Display
         }

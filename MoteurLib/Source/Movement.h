@@ -7,7 +7,7 @@ public:
 	Movement();
 	~Movement() override;
 
-	int Update() override;
+	int Update(float deltaTime) override;
 
 private:
 

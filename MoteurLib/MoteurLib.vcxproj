@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="MoteurPCH.h" />
     <ClInclude Include="Source\Camera.h" />
     <ClInclude Include="Source\Collider.h" />
     <ClInclude Include="Source\Component.h" />

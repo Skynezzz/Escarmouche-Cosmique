@@ -7,7 +7,7 @@ public:
 	MeshRenderer();
 	~MeshRenderer() override;
 
-	int Update() override;
+	int Update(float deltaTime) override;
 
 private:
 

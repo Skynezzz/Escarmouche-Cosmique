@@ -135,6 +135,9 @@
     <ClInclude Include="Source\GameObject.h">
       <Filter>Source\GameObject</Filter>
     </ClInclude>
+    <ClInclude Include="MoteurPCH.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Engine.cpp">
