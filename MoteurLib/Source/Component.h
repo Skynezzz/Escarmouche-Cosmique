@@ -8,6 +8,8 @@ public:
 	Component();
 	virtual ~Component();
 
+	virtual int Update() { return 0; };
+
 protected:
 
 	GameObject* ownGameObject;

@@ -5,7 +5,9 @@ class MeshRenderer : public Component
 {
 public:
 	MeshRenderer();
-	~MeshRenderer();
+	~MeshRenderer() override;
+
+	int Update() override;
 
 private:
 

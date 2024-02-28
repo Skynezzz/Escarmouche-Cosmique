@@ -5,7 +5,9 @@ class Script : public Component
 {
 public:
 	Script();
-	~Script();
+	~Script() override;
+
+	int Update() override;
 
 private:
 

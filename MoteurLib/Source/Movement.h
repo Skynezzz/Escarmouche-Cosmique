@@ -7,10 +7,11 @@ public:
 	Movement();
 	~Movement() override;
 
+	int Update() override;
+
+private:
 
 	void SetDirection();
 	void Move();
-
-private:
 
 };
