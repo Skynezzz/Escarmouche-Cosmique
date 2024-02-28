@@ -10,10 +10,6 @@ public:
 	GameObject() {};
 	virtual ~GameObject() {};
 
-private :
-
-	void Rotate(float yaw, float pitch, float roll);
-
 };
 
 
