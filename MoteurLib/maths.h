@@ -6,12 +6,20 @@ public:
 
 	void Identity();
 
+	void Rotate(float yaw, float pitch, float roll);
+
+	void Scale(float x, float y, float z);
+
+	void Position(float x, float y, float z);
+
+	void updateMatrix();
+
 private:
 
 	XMFLOAT3 vSca;
 	XMFLOAT4X4 mSca;
 
-	XMFLOAT3 vFor;
+	XMFLOAT3 vDir;
 	XMFLOAT3 vRight;
 	XMFLOAT3 vUp;
 	XMFLOAT4 qRot;

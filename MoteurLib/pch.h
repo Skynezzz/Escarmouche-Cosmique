@@ -8,7 +8,7 @@
 #define PCH_H
 
 // ajouter les en-têtes à précompiler ici
-#include "framework.h"
+//#include "framework.h"
 #include <windows.h> // for XMVerifyCPUSupport
 #include <DirectXMath.h>
 #include <DirectXPackedVector.h>
