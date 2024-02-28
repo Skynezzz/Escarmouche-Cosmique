@@ -1,12 +1,19 @@
 #pragma once
 
-#include "Time.h"
+#include "Window.h"
+#include "Player.h" // Supposons que tu as une classe Player
+#include "Time.h"   // Supposons que tu as une classe Time
 
 class Engine
 {
-	Engine();
-	~Engine();
+public:
+    Engine(HINSTANCE hInstance);
+    ~Engine();
 
-	Time time;
+    bool Initialize();
+    void Run();
+
+private:
+    Window mWindow;
+    Time mTime;
 };
-

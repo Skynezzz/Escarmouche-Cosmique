@@ -79,11 +79,11 @@
     <Filter Include="Source\pch">
       <UniqueIdentifier>{fce83e78-e298-42af-b8f0-0fcb486e07e1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Window">
+      <UniqueIdentifier>{d10376d9-0266-442e-94e4-6db823e7b915}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Engine.h">
       <Filter>Source\Engine</Filter>
     </ClInclude>
@@ -120,9 +120,6 @@
     <ClInclude Include="Source\Update.h">
       <Filter>Source\Update\Update</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Time.h">
-      <Filter>Source\Time</Filter>
-    </ClInclude>
     <ClInclude Include="GameObject.h">
       <Filter>Source\GameObject</Filter>
     </ClInclude>
@@ -132,11 +129,14 @@
     <ClInclude Include="maths.h">
       <Filter>Source\Utils</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Timer.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Window.h">
+      <Filter>Source\Window</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MoteurLib.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Engine.cpp">
       <Filter>Source\Engine</Filter>
     </ClCompile>
@@ -173,9 +173,6 @@
     <ClCompile Include="Source\Update.cpp">
       <Filter>Source\Update\Update</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Time.cpp">
-      <Filter>Source\Time</Filter>
-    </ClCompile>
     <ClCompile Include="GameObject.cpp">
       <Filter>Source\GameObject</Filter>
     </ClCompile>
@@ -184,6 +181,12 @@
     </ClCompile>
     <ClCompile Include="maths.cpp">
       <Filter>Source\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Timer.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Window.cpp">
+      <Filter>Source\Window</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
