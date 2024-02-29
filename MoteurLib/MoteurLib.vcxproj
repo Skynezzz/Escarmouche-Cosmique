@@ -143,6 +143,7 @@
     <ClInclude Include="Source\Camera.h" />
     <ClInclude Include="Source\Collider.h" />
     <ClInclude Include="Source\Component.h" />
+    <ClInclude Include="Source\d3dx12.h" />
     <ClInclude Include="Source\Display.h" />
     <ClInclude Include="Source\Engine.h" />
     <ClInclude Include="Source\GameObject.h" />
