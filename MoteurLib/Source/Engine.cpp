@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "Engine.h"
 #include "pch.h"
 
@@ -37,23 +38,13 @@ void Engine::Run()
             mTime.Tick();
 
             // Update
+<<<<<<< HEAD
+            //mPlayer.Update(mTime);
+=======
             // mPlayer.Update(mTime);
+>>>>>>> 06f004f7d84d3ea227f36d3c934a9c3e9876652e
 
             // Display
         }
     }
-}
-
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR pCmdLine, int nShowCmd)
-{
-    Engine engine(hInstance);
-
-    if ( !engine.Initialize() )
-    {
-        return 1;
-    }
-
-    engine.Run();
-
-    return 0;
 }

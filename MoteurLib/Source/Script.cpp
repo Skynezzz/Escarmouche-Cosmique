@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "Script.h"
 #include "pch.h"
 
