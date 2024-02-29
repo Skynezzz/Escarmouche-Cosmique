@@ -1,5 +1,5 @@
-#include "Mesh.h"
 #include "pch.h"
+#include "Mesh.h"
 
 Mesh::Mesh(ID3D12Device* device, ID3D12GraphicsCommandList* commandList, const void* vertices, UINT vertexCount, UINT vertexStride, const void* indices, UINT indexCount) : indexCount(indexCount) {
     // Création du buffer de vertex

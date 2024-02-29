@@ -1,6 +1,5 @@
 #include "pch.h"
 #include "Engine.h"
-#include "pch.h"
 
 Engine::Engine(HINSTANCE hInstance) : mWindow(hInstance)
 {}
@@ -38,12 +37,9 @@ void Engine::Run()
             mTime.Tick();
 
             // Update
-<<<<<<< HEAD
-            //mPlayer.Update(mTime);
-=======
-            // mPlayer.Update(mTime);
->>>>>>> 06f004f7d84d3ea227f36d3c934a9c3e9876652e
 
+            //mPlayer.Update(mTime);
+             
             // Display
         }
     }

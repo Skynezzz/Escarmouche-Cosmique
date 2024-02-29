@@ -23,3 +23,20 @@ private:
 	TRANSFORM transform;
 
 };
+
+template<typename T>
+T* GameObject::AddComponent()
+{
+    for ( Component* component : components )
+    {
+        if ( dynamic_cast< T* >(component) != nullptr )
+        {
+            return dynamic_cast< T* >(component);
+        }
+    }
+
+    T* newComponent = new T();
+    components.push_back(newComponent);
+
+    return newComponent;
+}

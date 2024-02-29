@@ -1,6 +1,5 @@
 #pragma once
 #include "Component.h"
-#include "pch.h"
 
 class Camera : public Component
 {
@@ -8,7 +7,6 @@ public:
 	Camera();
 	~Camera() override;
 
-<<<<<<< HEAD
 	DirectX::XMVECTOR GetPosition(); //Calculs Rapides
 	DirectX::XMFLOAT3 GetPosition3F(); //Stockages Informations
 
@@ -22,10 +20,7 @@ public:
 	DirectX::XMVECTOR GetLook()const; //Calc
 	DirectX::XMFLOAT3 GetLook3F()const; //Stockage
 
-	int Update() override;
-=======
 	int Update(float deltaTime) override;
->>>>>>> 06f004f7d84d3ea227f36d3c934a9c3e9876652e
 
 private:
 
