@@ -1,6 +1,7 @@
 #include "GameObject.h"
 #include "pch.h"
 
+
 template<typename T>
 T* GameObject::AddComponent()
 {
@@ -30,7 +31,3 @@ int GameObject::Update(float deltaTime)
 
     return returnValue;
 }
-
-D3D12_HEAP_PROPERTIES
-D3D12_RESSOURCES_DESC
-D3D12_RESSOURCES_BARRIER
