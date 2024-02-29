@@ -29,3 +29,7 @@ int GameObject::Update(float deltaTime)
 
     return returnValue;
 }
+
+D3D12_HEAP_PROPERTIES
+D3D12_RESSOURCES_DESC
+D3D12_RESSOURCES_BARRIER
