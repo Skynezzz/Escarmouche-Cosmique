@@ -1,6 +1,5 @@
 #pragma once
 #include "Component.h"
-#include "../Source/pch.h"
 
 #include <vector>
 

@@ -1,4 +1,5 @@
 #include "Engine.h"
+#include "pch.h"
 
 Engine::Engine(HINSTANCE hInstance) : mWindow(hInstance)
 {}

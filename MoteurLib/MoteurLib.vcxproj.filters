@@ -129,9 +129,6 @@
     <ClInclude Include="Source\maths.h">
       <Filter>Source\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="Source\pch.h">
-      <Filter>Source\pch</Filter>
-    </ClInclude>
     <ClInclude Include="Source\GameObject.h">
       <Filter>Source\GameObject</Filter>
     </ClInclude>
@@ -140,6 +137,9 @@
     </ClInclude>
     <ClInclude Include="Source\d3dx12.h">
       <Filter>Source\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\pch.h">
+      <Filter>Source\pch</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -188,11 +188,11 @@
     <ClCompile Include="Source\maths.cpp">
       <Filter>Source\Utils</Filter>
     </ClCompile>
-    <ClCompile Include="Source\pch.cpp">
-      <Filter>Source\pch</Filter>
-    </ClCompile>
     <ClCompile Include="Source\GameObject.cpp">
       <Filter>Source\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\pch.cpp">
+      <Filter>Source\pch</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

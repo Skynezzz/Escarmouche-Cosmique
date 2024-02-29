@@ -1,5 +1,5 @@
-#include <windows.h>
 #include "Timer.h"
+#include "pch.h"
 
 Timer::Timer() :
     mSecondsPerCount(0.0), mDeltaTime(-1.0), mBaseTime(0), mStopTimePressed(0),

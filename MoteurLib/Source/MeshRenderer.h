@@ -1,9 +1,9 @@
 #pragma once
 #include "Component.h"
 
-#include "Mesh.h"
-#include "Texture.h"
-#include "Shader.h"
+class Mesh;
+class Texture;
+class Shader;
 
 
 class MeshRenderer : public Component

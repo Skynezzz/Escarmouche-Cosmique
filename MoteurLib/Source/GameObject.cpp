@@ -1,4 +1,5 @@
 #include "GameObject.h"
+#include "pch.h"
 
 template<typename T>
 T* GameObject::AddComponent()

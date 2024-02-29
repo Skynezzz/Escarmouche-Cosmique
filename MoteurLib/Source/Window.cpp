@@ -1,4 +1,5 @@
 #include "Window.h"
+#include "pch.h"
 
 Window::Window(HINSTANCE hInstance) : mhAppInst(hInstance)
 {}

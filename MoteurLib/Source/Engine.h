@@ -1,7 +1,5 @@
 #pragma once
-
 #include "Window.h"
-//#include "Player.h" // Supposons que tu as une classe Player
 #include "Timer.h"   // Supposons que tu as une classe Time
 
 class Engine

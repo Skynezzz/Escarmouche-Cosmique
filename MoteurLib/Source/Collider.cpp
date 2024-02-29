@@ -1,4 +1,5 @@
 #include "Collider.h"
+#include "pch.h"
 #include <cmath>
 
 Collider::Collider()
