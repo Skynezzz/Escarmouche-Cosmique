@@ -1,40 +1,35 @@
-#include "pch.h"
 #include "GameObject.h"
 
-
-void GameObject::Rotate(float yaw, float pitch, float roll)
+template<typename T>
+T* GameObject::AddComponent()
 {
+    for ( Component* component : components )
+    {
+        if ( dynamic_cast< T* >(component) != nullptr )
+        {
+            return dynamic_cast< T* >(component);
+        }
+    }
 
-	// // créer un quaternion à chaque rotation
-	//D3DXQUATERNION quat;
-	//D3DXQuaternionRotationAxis(&quat,&m_vDir, roll);
-	//quatRot = quat;
-	//D3DXQuaternionRotationAxis(&quat,&m_vRight, pitch);
-	//quatRot *= quat;	
-	//D3DXQuaternionRotationAxis(&quat,&m_vUp, yaw);
-	//quatRot *= quat;
+    T* newComponent = new T();
+    components.push_back(newComponent);
 
-	// //Ajouter la rotation delta a la rotation actuelle
-	//m_quatRot *= quatRot;
-
-	// //Convertir le quaternion en une matrice de roation
-	//D3DXMATRIX matRot;
-	//D3DXMatrixRotationQuternion(&matRot, &m_quatRot);
-
-	// //Mettre a jour les axes de notre objet
-	//m_vRight.x = matRot._11;
-	//m_vRight.y = matRot._21;
-	//m_vRight.z = matRot._31;
-	//m_vUp.x = matRot._21;
-	//m_vUp.y = matRot._22;
-	//m_vUp.z = matRot._23;
-	//m_vDir.x = matRot._31;
-	//m_vDir.y = matRot._32;
-	//m_vDir.z matRot._33;
-
-
-
-	XMVECTOR XM_CALLCONV XMLoadFloat4(const XMFLOAT4 * qRot);
-
-	void XM_CALLCONV XMStoreFloat4(XMFLOAT4 * qRot, FXMVECTOR V);
+    return newComponent;
 }
+
+int GameObject::Update(float deltaTime)
+{
+    int returnValue = 0;
+
+    for ( auto component = components.begin(); component != components.end(); component++ )
+    {
+        if ( ( *component )->Update(deltaTime) == 1 )
+            returnValue = 1;
+    }
+
+    return returnValue;
+}
+
+D3D12_HEAP_PROPERTIES
+D3D12_RESSOURCES_DESC
+D3D12_RESSOURCES_BARRIER

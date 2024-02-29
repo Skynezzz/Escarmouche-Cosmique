@@ -8,7 +8,7 @@ public:
 	Component();
 	virtual ~Component();
 
-	virtual int Update() { return 0; };
+	virtual int Update(float deltaTime) { return 0; };
 
 protected:
 
