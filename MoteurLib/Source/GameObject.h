@@ -9,7 +9,7 @@ public:
 
 	GameObject() {};
 	~GameObject() {};
-
+	void Rotate(float yaw, float pitch, float roll);
 };
 
 

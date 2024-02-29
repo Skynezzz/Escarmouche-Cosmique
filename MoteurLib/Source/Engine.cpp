@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "Engine.h"
 
 Engine::Engine(HINSTANCE hInstance) : mWindow(hInstance)
@@ -36,23 +37,9 @@ void Engine::Run()
             mTime.Tick();
 
             // Update
-            mPlayer.Update(mTime);
+            //mPlayer.Update(mTime);
 
             // Display
         }
     }
-}
-
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR pCmdLine, int nShowCmd)
-{
-    Engine engine(hInstance);
-
-    if ( !engine.Initialize() )
-    {
-        return 1;
-    }
-
-    engine.Run();
-
-    return 0;
 }

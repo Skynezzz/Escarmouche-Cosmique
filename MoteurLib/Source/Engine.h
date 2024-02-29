@@ -1,8 +1,7 @@
 #pragma once
 
 #include "Window.h"
-#include "Player.h" // Supposons que tu as une classe Player
-#include "Time.h"   // Supposons que tu as une classe Time
+#include "Timer.h"
 
 class Engine
 {
@@ -15,5 +14,5 @@ public:
 
 private:
     Window mWindow;
-    Time mTime;
+    Timer mTime;
 };
