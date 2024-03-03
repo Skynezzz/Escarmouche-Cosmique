@@ -1,75 +1,104 @@
-#include "pch.h"
-#include "Window.h"
-#include "pch.h"
-#include "Window.h"
+#include"pch.h"
+#include "window.h"
 
-Window::Window(HINSTANCE hInstance) : mhAppInst(hInstance)
-{}
+Window::Window(HINSTANCE hInstance, int nCmdShow) : hInstance(hInstance), nCmdShow(nCmdShow) {}
 
-Window::~Window()
-{}
-
-bool Window::Initialize()
-{
-    if (!InitMainWindow())
+bool Window::Initialize() {
+    if ( !CreateRenderWindow() ) {
+        throw std::runtime_error("Failed to create render window");
         return false;
+    }
+
+    if ( !InitializeDirectX() ) {
+        throw std::runtime_error("Failed to initialize DirectX");
+        return false;
+    }
 
     return true;
 }
 
-bool Window::InitMainWindow()
-{
-    WNDCLASS wc;
-    wc.style = CS_HREDRAW | CS_VREDRAW;
-    wc.lpfnWndProc = MainWndProc;
-    wc.cbClsExtra = 0;
-    wc.cbWndExtra = 0;
-    wc.hInstance = mhAppInst;
-    wc.hIcon = LoadIcon(0, IDI_APPLICATION);
-    wc.hCursor = LoadCursor(0, IDC_ARROW);
-    wc.hbrBackground = (HBRUSH)GetStockObject(NULL_BRUSH);
-    wc.lpszMenuName = 0;
-    wc.lpszClassName = L"MainWnd";
+void Window::Run() {
+    MSG msg = { 0 };
 
-    if (!RegisterClass(&wc))
-    {
-        MessageBox(0, L"RegisterClass Failed.", 0, 0);
-        return false;
+    while ( msg.message != WM_QUIT ) {
+        if ( PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE) ) {
+            TranslateMessage(&msg);
+            DispatchMessage(&msg);
+        }
     }
+}
 
-    RECT R = { 0, 0, mClientWidth, mClientHeight };
-    AdjustWindowRect(&R, WS_OVERLAPPEDWINDOW, false);
-    int width = R.right - R.left;
-    int height = R.bottom - R.top;
+bool Window::CreateRenderWindow() {
+    WNDCLASSEX wc = { sizeof(WNDCLASSEX), CS_CLASSDC, WindowProc, 0L, 0L, GetModuleHandle(NULL), NULL, NULL, NULL, NULL, TEXT("DirectX12 Window"), NULL };
+    RegisterClassEx(&wc);
+    hwnd = CreateWindow(wc.lpszClassName, TEXT("DirectX12 Window"), WS_OVERLAPPEDWINDOW, 100, 100, 800, 600, NULL, NULL, wc.hInstance, NULL);
 
-    mhMainWnd = CreateWindow(L"MainWnd", mMainWndCaption.c_str(),
-        WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, width, height, 0, 0, mhAppInst, 0);
-
-    if (!mhMainWnd)
-    {
-        MessageBox(0, L"CreateWindow Failed.", 0, 0);
+    if ( !hwnd )
         return false;
-    }
 
-    ShowWindow(mhMainWnd, SW_SHOW);
-    UpdateWindow(mhMainWnd);
+    ShowWindow(hwnd, nCmdShow);
+    UpdateWindow(hwnd);
 
     return true;
 }
 
-void Window::Show()
-{
-    ShowWindow(mhMainWnd, SW_SHOW);
-    UpdateWindow(mhMainWnd);
-}
-
-LRESULT CALLBACK Window::MainWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
-{
-    switch (msg)
-    {
+LRESULT CALLBACK Window::WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) {
+    switch ( message ) {
     case WM_DESTROY:
         PostQuitMessage(0);
         return 0;
+    default:
+        return DefWindowProc(hWnd, message, wParam, lParam);
     }
-    return DefWindowProc(hwnd, msg, wParam, lParam);
+}
+
+bool Window::InitializeDirectX() {
+    UINT dxgiFactoryFlags = 0;
+#ifdef _DEBUG
+    {
+        ComPtr<ID3D12Debug> debugController;
+        if ( SUCCEEDED(D3D12GetDebugInterface(IID_PPV_ARGS(&debugController))) ) {
+            debugController->EnableDebugLayer();
+            dxgiFactoryFlags |= DXGI_CREATE_FACTORY_DEBUG;
+        }
+    }
+#endif
+
+    ComPtr<IDXGIFactory4> dxgiFactory;
+    if ( FAILED(CreateDXGIFactory2(dxgiFactoryFlags, IID_PPV_ARGS(&dxgiFactory))) )
+        return false;
+
+    ComPtr<IDXGIAdapter1> adapter;
+    if ( FAILED(dxgiFactory->EnumAdapters1(0, &adapter)) )
+        return false;
+
+    if ( FAILED(D3D12CreateDevice(adapter.Get(), D3D_FEATURE_LEVEL_11_0, IID_PPV_ARGS(&device))) )
+        return false;
+
+    D3D12_COMMAND_QUEUE_DESC queueDesc = {};
+    queueDesc.Type = D3D12_COMMAND_LIST_TYPE_DIRECT;
+    queueDesc.Priority = D3D12_COMMAND_QUEUE_PRIORITY_NORMAL;
+    queueDesc.Flags = D3D12_COMMAND_QUEUE_FLAG_NONE;
+    queueDesc.NodeMask = 0;
+
+    if ( FAILED(device->CreateCommandQueue(&queueDesc, IID_PPV_ARGS(&commandQueue))) )
+        return false;
+
+    DXGI_SWAP_CHAIN_DESC1 swapChainDesc = {};
+    swapChainDesc.BufferCount = 2;
+    swapChainDesc.Width = 800;
+    swapChainDesc.Height = 600;
+    swapChainDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+    swapChainDesc.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
+    swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_DISCARD;
+    swapChainDesc.SampleDesc.Count = 1;
+
+    ComPtr<IDXGISwapChain1> tempSwapChain;
+    if ( FAILED(dxgiFactory->CreateSwapChainForHwnd(commandQueue.Get(), hwnd, &swapChainDesc, nullptr, nullptr, &tempSwapChain)) )
+        return false;
+
+    if ( FAILED(tempSwapChain.As(&swapChain)) )
+        return false;
+
+    return true;
 }

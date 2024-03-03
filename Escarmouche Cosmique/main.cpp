@@ -1,30 +1,17 @@
+#include "../MoteurLib/Source/pch.h"
 #include "../MoteurLib/Source/Window.h"
 
-#define MAX_LOADSTRING 100
-// Variables globales :
-HINSTANCE hInst;                                // instance actuelle
-WCHAR szTitle[MAX_LOADSTRING];                  // Texte de la barre de titre
-WCHAR szWindowClass[MAX_LOADSTRING];            // nom de la classe de fenêtre principale
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
+    Window window(hInstance, nCmdShow);
 
-int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
-    _In_opt_ HINSTANCE hPrevInstance,
-    _In_ LPWSTR    lpCmdLine,
-    _In_ int       nCmdShow)
-{
-
-    Window window(hInstance);
-    window.Initialize();
-
-    MSG msg;
-
-    // Boucle de messages principale :
-    while (GetMessage(&msg, nullptr, 0, 0))
-    {
-        TranslateMessage(&msg);
-        DispatchMessage(&msg);
+    try {
+        window.Initialize();
+        window.Run();
+    }
+    catch (const std::exception& e) {
+        MessageBoxA(NULL, e.what(), "Error", MB_OK | MB_ICONERROR);
+        return EXIT_FAILURE;
     }
 
-    return (int)msg.wParam;
-
-    // return 0;
+    return EXIT_SUCCESS;
 }

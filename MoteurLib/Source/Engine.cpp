@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "Engine.h"
 
-Engine::Engine(HINSTANCE hInstance) : mWindow(hInstance)
+Engine::Engine(HINSTANCE hInstance) : mWindow(hInstance, SW_SHOWNORMAL)
 {}
 
 Engine::~Engine()
@@ -33,7 +33,7 @@ void Engine::Run()
         }
         else
         {
-            // Mettre à jour le temps
+            // Mettre ï¿½ jour le temps
             mTime.Tick();
 
             // Update

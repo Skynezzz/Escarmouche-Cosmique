@@ -1,28 +1,24 @@
 ﻿#pragma once
 
-#include <Windows.h>
-#include <string>
+using Microsoft::WRL::ComPtr;
 
-class Window
-{
+class Window {
 public:
-    Window(HINSTANCE hInstance);
-    ~Window();
-
+    Window(HINSTANCE hInstance, int nCmdShow);
     bool Initialize();
-    void Show();
-    HWND GetHWND() const { return mhMainWnd; }
-    int GetClientWidth() const { return mClientWidth; }
-    int GetClientHeight() const { return mClientHeight; }
+    void Run();
+
+    HINSTANCE hInstance;
+    HWND hwnd;
+    int nCmdShow;
 
 private:
-    bool InitMainWindow();
-    static LRESULT CALLBACK MainWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
-private:
-    HINSTANCE mhAppInst = nullptr; // application instance handle
-    HWND      mhMainWnd = nullptr; // main window handle
-    int mClientWidth = 800;
-    int mClientHeight = 600;
-    std::wstring mMainWndCaption = L"Window";
+    ComPtr<ID3D12Device> device;
+    ComPtr<ID3D12CommandQueue> commandQueue;
+    ComPtr<IDXGISwapChain4> swapChain;
+
+    bool CreateRenderWindow();
+    static LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
+    bool InitializeDirectX();
 };
